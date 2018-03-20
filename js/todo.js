@@ -1,5 +1,13 @@
 $(document).ready(function(){
-  // call functions here
+
+  $('form')[0].addEventListener('submit', addListItem)
 });
 
-// define functions here
+
+function addListItem(event) {
+  console.log("Hello vorld")
+  event.preventDefault()
+
+  $('#list').append(`<li>${$('#item')[0].value}</li>`)
+
+}
